@@ -1,0 +1,4 @@
+
+  localized do
+    mount Ecm::Staff::Backend::Engine => '/backend/ecm/staff'
+  end
