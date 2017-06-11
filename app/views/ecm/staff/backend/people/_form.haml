@@ -1,6 +1,13 @@
 = form.input :prefix
 = form.input :firstname
 = form.input :lastname
-= form.input :birthdate
-= form.input :description
+= form.input :birthdate, start_year: 100.years.ago.year, end_year: 14.years.ago.year, include_blank: true
+= form.input :description, as: :text
 = form.input :markup_language
+
+%h4= resource_class.human_attribute_name(:pictures)
+#pictures
+  = form.simple_fields_for(:pictures) do |picture|
+    = render 'picture_fields', f: picture
+  .well.well-xs.links
+    = link_to_add_association form, :pictures, class: 'btn btn-default btn-xs'

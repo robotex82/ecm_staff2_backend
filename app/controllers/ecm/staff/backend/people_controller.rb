@@ -13,7 +13,7 @@ module Ecm
         end
 
         def permitted_params
-          params.require(:person).permit(:prefix, :firstname, :lastname, :birthdate, :position, :description, :markup_language)
+          params.require(:person).permit(:prefix, :firstname, :lastname, :birthdate, :position, :description, :markup_language, pictures_attributes: [ :image, :_destroy, :id ])
         end
       end
     end
