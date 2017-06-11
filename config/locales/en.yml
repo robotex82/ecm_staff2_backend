@@ -1,0 +1,5 @@
+en:
+  classes:
+    ecm/staff/backend/engine: 'Staff'
+  routes:
+    ecm-staff-backend-engine: 'staff'

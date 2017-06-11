@@ -11,6 +11,10 @@ module Ecm
         def load_resource
           load_scope.friendly.find(params[:id])
         end
+
+        def permitted_params
+          params.require(:person).permit(:prefix, :firstname, :lastname, :birthdate, :position, :description, :markup_language)
+        end
       end
     end
   end

@@ -2,5 +2,4 @@ de:
   classes:
     ecm/staff/backend/engine: 'Mitarbeiter'
   routes:
-    mount:
-      ecm_staff_backend: '/backend/staff'
+    ecm-staff-backend-engine: 'mitarbeiter'

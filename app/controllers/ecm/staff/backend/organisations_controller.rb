@@ -11,6 +11,10 @@ module Ecm
         def load_resource
           load_scope.friendly.find(params[:id])
         end
+
+        def permitted_params
+          params.require(:organisation).permit(:name, :description, :markup_language)
+        end
       end
     end
   end
