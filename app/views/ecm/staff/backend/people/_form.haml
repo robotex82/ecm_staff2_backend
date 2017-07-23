@@ -3,7 +3,7 @@
 = form.input :lastname
 = form.input :birthdate, start_year: 100.years.ago.year, end_year: 14.years.ago.year, include_blank: true
 = form.input :description, as: :text
-= form.input :markup_language
+= form.input :markup_language, collection: Ecm::Staff::Configuration.markup_languages, include_blank: false
 
 %h4= resource_class.human_attribute_name(:pictures)
 #pictures

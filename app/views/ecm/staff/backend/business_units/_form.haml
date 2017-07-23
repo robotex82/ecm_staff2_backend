@@ -2,4 +2,4 @@
 = form.association :parent
 = form.input :name
 = form.input :description
-= form.input :markup_language
+= form.input :markup_language, collection: Ecm::Staff::Configuration.markup_languages, include_blank: false
