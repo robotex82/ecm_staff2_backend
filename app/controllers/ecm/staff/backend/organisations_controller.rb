@@ -2,7 +2,7 @@ module Ecm
   module Staff
     module Backend
       class OrganisationsController < Itsf::Backend::Resource::BaseController
-        include Controller::FriendlyIdConcern
+        include ResourcesController::FriendlyIdConcern
 
         def self.resource_class
           Ecm::Staff::Organisation
