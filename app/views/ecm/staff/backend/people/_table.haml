@@ -1,6 +1,7 @@
 = table.column(:preview_picture) do |person|
-  - if person.preview_picture.present?
-    %img.img-responsive.bottom-margin-2{ src: person.preview_picture.image.url(:medium_thumb), alt: person.preview_picture.description, title: person.preview_picture.description }
+  - capture_haml do
+    - if person.preview_picture.present?
+      %img.img-responsive.bottom-margin-2{ src: person.preview_picture.image.url(:medium_thumb), alt: person.preview_picture.description, title: person.preview_picture.description }
 = table.column :firstname
 = table.column :lastname
 = table.column :birthdate
