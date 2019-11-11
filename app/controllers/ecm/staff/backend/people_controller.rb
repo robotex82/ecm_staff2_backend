@@ -3,6 +3,7 @@ module Ecm
     module Backend
       class PeopleController < Itsf::Backend::Resource::BaseController
         include ResourcesController::FriendlyIdConcern
+        include ResourcesController::ActsAsListConcern
 
         def self.resource_class
           Ecm::Staff::Person
